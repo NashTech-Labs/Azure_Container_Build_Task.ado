@@ -1,1 +1,29 @@
+# Container Build Task.
 
+parameters:
+- name: 'Dockerfile'
+  type: string    
+  default: 'Dockerfile'
+- name: 'dockerRegistryServiceConnection'
+  type: string    
+  default: 'Dockerfile'
+- name: 'repository'
+  type: string    
+  default: 'Dockerfile'
+- name: 'buildContext'
+  type: string    
+  default: '.'
+- name: 'tags'
+  type: string    
+  default: '$(Build.BuildId)'
+
+steps:
+- task: ContainerBuild@0
+  inputs:
+    Dockerfile: '${{parameters.Dockerfile}}'      
+    dockerRegistryServiceConnection: '${{parameters.dockerRegistryServiceConnection}}'     
+    repository: '${{parameters.repository}}'      
+    buildContext: '${{parameters.buildContext}}'     
+    tags: '${{parameters.tags}}'       
+  name: ContainerBuild
+  displayName: "Container Build Task"
