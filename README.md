@@ -7,7 +7,7 @@ The pipeline requires the following parameters to be defined:
 
 
 | Name  | Displayname | type | Default | Values | Opional/Required | Comments |
-| ------------- | ------------- | ------------- | ------------- | ------------- | ------------- | ------------- |
+| ------------- | ------------- | :-------------: | :-------------: | ------------- | :-------------: | ------------- |
 | Dockerfile | Dockerfile | string | Dockerfile | | Required | The path to the Dockerfile |
 | dockerRegistryServiceConnection | Docker registry service connection | string | | | Optional | Specifies a Docker registry service connection |
 | repository  | Container repository | string | | | Optional | The name of the repository within the container registry |
